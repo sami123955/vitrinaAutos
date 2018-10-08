@@ -22,6 +22,7 @@ export class Inicio {
     private pipe_search: SearchPipe
   ){}
 
+  //Consultamos la informacion al momento de entrar en la pagina para mostrar el listdo completo
   ngOnInit() {
     //Consultamos los datos
     this.autos.getJSON().subscribe(
@@ -31,12 +32,11 @@ export class Inicio {
       error => console.log(error));
   }
 
-
+  //Metodo que se ejecuta con la funcion keyup, consulta los registros por marca
   filtrar() {
     this.autos.getJSON().subscribe(
       data => {
         this.datos.marcas = this.pipe_search.transform(data.marcas, this.searchText);
-        console.log('Datos', this.datos);
       },
       error => console.log(error));
   }
