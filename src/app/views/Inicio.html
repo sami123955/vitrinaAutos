@@ -1,0 +1,41 @@
+<div class="column col-lg-12">
+    <div class="row titulo">
+      <div class="column col-lg-7 col-sm-12 content-titulo">
+          <span>Vitrina de Autos GAP</span>
+      </div>
+      <div class="column col-lg-5 content-filtro col-sm-12">
+        <div class="filtro">
+          <input type="text" class="filtro form-control" [(ngModel)]="searchText" name="searchText" placeholder="Buscar marca..." (keyup)="filtrar()" />
+        </div>
+      </div>
+    </div>
+    <div *ngIf="datos != null" class="">
+      <div class="row autos" *ngFor="let marca of datos.marcas">
+        <div class="column col-lg-8 offset-lg-2 content-logo-marca">
+          <img [src]="marca.logo" class="logo-marca">
+        </div>
+        <div class="column col-lg-4 col-sm-12" *ngFor="let auto of marca.autos">
+          <div class="card">
+            <img class="card-img-top" [src]="auto.foto">
+            <div class="card-body">
+              <h5 class="card-title">{{auto.nombre}}</h5>
+              <ul class="lista-atributos">
+                <li>
+                  <span class="etiqueta">Modelo:</span>
+                  {{auto.modelo}}
+                </li>
+                <li>
+                  <span class="etiqueta">Año:</span>
+                  {{auto.anio}}
+                </li>
+                <li>
+                  <span class="etiqueta">Precio:</span>
+                  {{auto.precio}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.titulo {
+  font-size: 30px;
+  font-weight: bold;
+  background: #DFDFDF;
+}
+
+.content-filtro {
+  padding-bottom: 5px;
+  text-align: right;
+}
+
+.filtro {
+  display: inline-block;
+}
+
+.autos {
+    background: #f8f9fa;
+}
+.content-logo-marca {
+  text-align: center;
+  /* background: #CCD8F0; */
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.logo-marca {
+  width: 140px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.etiqueta {
+  font-weight: bold;
+}
+
+.lista-atributos {
+  padding-left: 15px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+
+@media screen and (min-width: 300px){
+  .content-titulo {
+    text-align: center;
+  }
+  .content-filtro {
+    text-align: center;
+  }
+}

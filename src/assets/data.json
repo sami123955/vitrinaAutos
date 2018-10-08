@@ -1,0 +1,85 @@
+{
+    "marcas": [
+      {
+          "nombre": "Ford",
+          "logo": "http://www.carlogos.org/logo/Ford-logo-2003-1366x768.png",
+          "autos": [
+            {
+              "nombre": "Fiesta",
+              "modelo": 2018,
+              "foto": "https://www.cochesyconcesionarios.com/novedades/wp-content/uploads/2017/12/Ford-Fiesta_09.jpg",
+              "precio": "$ 46.590.000",
+              "anio": 2017
+            },
+            {
+              "nombre": "Fusion",
+              "modelo": 2017,
+              "foto": "https://st.motortrendenespanol.com/uploads/sites/45/2016/08/2017-Ford-Fusion-Sport-front-three-quarter-in-motion.jpg?interpolation=lanczos-none&fit=around%7C660%3A440",
+              "precio": "$ 85.990.000",
+              "anio": 2016
+            },
+            {
+              "nombre": "Mustang",
+              "modelo": 2016,
+              "foto": "https://www.cochesyconcesionarios.com/novedades/wp-content/uploads/2015/08/Ford_Mustang.jpg",
+              "precio": "$ 159.990.000",
+              "anio": 2015
+            },
+            {
+              "nombre": "EcoSport",
+              "modelo": 2018,
+              "foto": "https://images.latamautos.com/thumbs/w/300x300/ptx_migration_mexico/catalogNews/125/125_1517596554830_403.jpg?silly_me=1",
+              "precio": "$ 60.990.000",
+              "anio": 2017
+            }
+          ]
+      },
+      {
+        "nombre": "Chevrolet",
+        "logo": "http://www.carlogos.org/logo/Chevrolet-logo-2013-2560x1440.png",
+        "autos": [
+          {
+            "nombre": "Spark Life",
+            "modelo": 2018,
+            "foto": "https://images.pastatic.com/Content/ImagesContent/101/691/1.jpg",
+            "precio": "$ 23.990.000",
+            "anio": 2017
+          },
+          {
+            "nombre": "Spark GT",
+            "modelo": 2018,
+            "foto": "http://static.hsbnoticias.com/sites/default/files/styles/medium/public/gallery/2016/03/spark-gris-galapagos.png?itok=7HCQJvji",
+            "precio": "$ 32.990.000",
+            "anio": 2017
+          }
+        ]
+      },
+      {
+        "nombre": "KIA",
+        "logo": "http://www.carlogos.org/logo/Kia-logo-2560x1440.png",
+        "autos": [
+          {
+            "nombre": "Cerato",
+            "modelo": 2018,
+            "foto": "https://i.i-sgcm.com/new_cars/cars/12334/12334_m.jpg",
+            "precio": "$ 70.990.000",
+            "anio": 2017
+          },
+          {
+            "nombre": "Picanto",
+            "modelo": 2018,
+            "foto": "https://cdn77.motor.es/fotos-ficha/kia/medianas/kia-picanto-40061_1.jpg",
+            "precio": "$ 60.990.000",
+            "anio": 2017
+          },
+          {
+            "nombre": "Rio Sedan",
+            "modelo": 2018,
+            "foto": "https://media.ed.edmunds-media.com/kia/rio/2018/oem/2018_kia_rio_sedan_ex_fq_oem_3_300.jpg",
+            "precio": "$ 90.990.000",
+            "anio": 2017
+          }
+        ]
+      }
+    ]
+}

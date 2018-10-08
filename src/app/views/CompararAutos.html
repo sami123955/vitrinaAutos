@@ -1,0 +1,83 @@
+<div class="column col-lg-12">
+    <div class="row titulo">
+      <div class="column col-lg-7 col-sm-12">
+          <span>Comparar Autos</span>
+      </div>
+    </div>
+    <div class="row autos">
+      <div class="column col-lg-4 content-caja col-sm-12" *ngFor="let auto of autos_agregados; let i = index">
+        <div class="card">
+           <img class="card-img-top" src="http://www.dibujospara.com/wp-content/uploads/2011/05/dibujo-de-auto-bmw-m3.jpg">
+           <img src="https://cdn.pixabay.com/photo/2016/03/21/05/05/minus-1270000_960_720.png" alt="" class="icono-remover" *ngIf="i == autos_agregados.length - 1" (click)="removerAuto()">
+          <div class="card-body">
+            <label for="">Marca</label>
+            <select class="form-control" (change)="consultarAutosPorMarca(i, $event)" [(ngModel)]="auto.marca_seleccionada" name="marca_seleccionada">
+              <option value="">Seleccionar marca...</option>
+              <option *ngFor="let marca of datos.marcas; let j = index" [value]="j">{{marca.nombre}}</option>
+            </select>
+            <label for="">Auto</label>
+            <select class="form-control" (change)="seleccionarAuto(i, $event.target.value)">
+              <option value="">Seleccionar vehiculo...</option>
+              <option *ngFor="let auto of autos_agregados[i].autos_marca; let k = index" [value]="k">{{auto.nombre}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="column col-lg-4 content-caja col-sm-12" *ngIf="agrear_autos">
+        <div class="caja-agregar" (click)="agregarAuto()">
+          <img src="http://www.uwosh.edu/library/images/plus-icon.png/@@images/image.png" class="icono-agregar">
+        </div>
+      </div>
+    </div>
+    <div class="row autos">
+      <div class="column col-lg-4 col-sm-12">
+        <button type="button" class="btn btn-secundary" name="button" (click)="compararAutos()">Comparar Autos</button>
+      </div>
+    </div>
+    <div class="row autos content-tabla" *ngIf="comparar_autos">
+      <div class="column col-lg-12 comparativa-lg">
+        <table class="table table-bordered table-comparativa">
+          <thead>
+            <tr>
+              <!-- Recorremos los vehiculos seleccionados para extraer el nombre y ponerlo como titulos  -->
+              <th scope="col">Atributo</th>
+              <th *ngFor="let auto of autos_agregados">{{auto.auto_seleccionado.nombre}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let atributo of atributos">
+              <td>{{atributo}}</td>
+              <td *ngFor="let auto of autos_agregados">
+                <div *ngIf="atributo == 'foto'">
+                    <img [src]="auto.auto_seleccionado[atributo]" alt="" width="80">
+                </div>
+                <div *ngIf="atributo != 'foto'">
+                    {{auto.auto_seleccionado[atributo]}}
+                </div>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="column col-sm-12 comparativa-sm">
+        <div class="row" *ngFor="let auto of autos_agregados">
+          <table class="table table-bordered table-comparativa">
+            <tbody>
+              <tr *ngFor="let atributo of atributos">
+                <td>{{atributo}}</td>
+                <td>
+                  <div *ngIf="atributo == 'foto'">
+                      <img [src]="auto.auto_seleccionado[atributo]" alt="" width="80">
+                  </div>
+                  <div *ngIf="atributo != 'foto'">
+                      {{auto.auto_seleccionado[atributo]}}
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
