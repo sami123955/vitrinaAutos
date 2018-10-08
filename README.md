@@ -8,4 +8,7 @@ Una vez clonado el proyecto, es necesario instalar el node_modules, ubicado en l
 
 ## Detalle del proyecto
 
-El proyecto cuenta con dos secciones: Inicio y Comparar Autos
+El proyecto cuenta con dos secciones: Inicio y Comparar Autos:
+
+- En el inicio, podremos encontrar el listado de autos, separados por en sus respectivas marcas.
+- En la pantalla de camparar autos, se podrán agregar los autos y eventualmente realizar las comparaciones de los atribuos con los que cuenta actualmente, cargando toda la información dinámicamente. 
